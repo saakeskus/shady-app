@@ -1,5 +1,5 @@
 /* Generated cache version changes with the HTML. No app/editor data goes here. */
-const CACHE = 'frank-mockup-static-8d607392ea5b88a1';
+const CACHE = 'frank-mockup-static-230ce463a0db4b40';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', event => {

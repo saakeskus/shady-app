@@ -131,6 +131,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   --off-green: #76B69F;
   --validity-green: #7AFFB7;
   --bg: #F9F9F9;
+  --page-bg: #fff;
   --fg: #121821;
   --fg-dim: #5A5D63;
   --card-bg: #fff;
@@ -142,15 +143,17 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
+  --app-bottom-padding: 0px;
+  --browser-bottom-padding: 0px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 button:focus:not(:focus-visible) { outline: none; }
 [hidden] { display: none !important; }
 html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: var(--page-bg); }
 body {
-  background: var(--bg);
+  background: var(--page-bg);
   color: var(--fg);
   font-family: 'FrankMockupSans', system-ui, sans-serif;
   font-size: 16px;
@@ -262,9 +265,9 @@ body {
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
-  height: calc(70px + max(var(--safe-bottom), 10px));
+  height: calc(70px + max(var(--safe-bottom), var(--browser-bottom-padding)));
   padding-top: 24px;
-  padding-bottom: max(var(--safe-bottom), 10px);
+  padding-bottom: max(var(--safe-bottom), var(--browser-bottom-padding));
   position: relative;
   z-index: 10;
 }
@@ -305,19 +308,19 @@ body {
    lands straight on the labels; guarantee room for it. */
 @media (display-mode: standalone), (display-mode: fullscreen) {
   .tab-bar {
-    height: calc(70px + max(var(--safe-bottom), 26px));
-    padding-bottom: max(var(--safe-bottom), 26px);
+    height: calc(70px + max(var(--safe-bottom), var(--app-bottom-padding)));
+    padding-bottom: max(var(--safe-bottom), var(--app-bottom-padding));
   }
 }
 /* Fullscreen API presentation does not always change display-mode (Chrome).
    Select the actual fullscreen root as well, including older iPad WebKit. */
 :root:fullscreen .tab-bar {
-  height: calc(70px + max(var(--safe-bottom), 26px));
-  padding-bottom: max(var(--safe-bottom), 26px);
+  height: calc(70px + max(var(--safe-bottom), var(--app-bottom-padding)));
+  padding-bottom: max(var(--safe-bottom), var(--app-bottom-padding));
 }
 :root:-webkit-full-screen .tab-bar {
-  height: calc(70px + max(var(--safe-bottom), 26px));
-  padding-bottom: max(var(--safe-bottom), 26px);
+  height: calc(70px + max(var(--safe-bottom), var(--app-bottom-padding)));
+  padding-bottom: max(var(--safe-bottom), var(--app-bottom-padding));
 }
 
 /* ===== SHARED PRIMITIVES ===== */
