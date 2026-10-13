@@ -1,0 +1,10 @@
+Derived from Raleway in Frank App 4.8.5, without subsetting.
+Glyph outlines, advances and kerning are unchanged. Vertical metrics
+match Android includeFontPadding; modified faces are renamed
+FrankMockupSans under the SIL OFL reserved font name requirement.
+
+Copyright 2010 The Raleway Project Authors (impallari@gmail.com), with Reserved Font Name "Raleway".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+http://scripts.sil.org/OFL

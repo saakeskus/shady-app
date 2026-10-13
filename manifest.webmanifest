@@ -1,0 +1,17 @@
+{
+  "name": "Frank App",
+  "short_name": "Frank",
+  "id": "./",
+  "description": "Frank App -mockup",
+  "lang": "fi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F9F9F9",
+  "theme_color": "#FD1E6E",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
